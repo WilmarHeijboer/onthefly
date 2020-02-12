@@ -1,0 +1,122 @@
+body{
+	background: url(airplane2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.jari{
+  padding-top: 150px;
+}
+@use postcss-cssnext;
+
+/* helpers/grid.css */
+
+.grid {
+  margin-left: 500px;
+  margin-right: 500px;
+  max-width: 42em;
+  width: 100%;
+}
+
+/* helpers/sticky.css */
+
+.sticky {
+  position: sticky;
+  will-change: transform;
+}
+
+.sticky--top {
+  top: 0;
+}
+
+/* layout/base.css */
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.75;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* layout/header.css */
+
+.header {
+  background-color: #0099ff;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+
+.header::after {
+  bottom: 0;
+  box-shadow: 0 0.0625em 0.5em rgba(0, 0, 0, 0.3);
+  content: '';
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.header.is-active::after {
+  opacity: 1;
+}
+
+/* layout/main.css */
+
+.main {
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+/* modules/headline.css */
+
+
+/* modules/navigation.css */
+
+.navigation a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+.navigation .is-active {
+  background-color: #000;
+  color: #fff;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 511px;
+}
+
+.navigation__list {
+  list-style: none;
+  margin: -0.5em;
+  padding: 0;
+}
+
+.navigation__list--inline {
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0.5em;
+}
+
+/* modules/paragraph.css */
+
+p {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+}
